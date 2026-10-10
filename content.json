@@ -1,1 +1,26 @@
-
+{
+  "about": "我是 幻想家lxlx。 我想用不同的形式记录灵感，把脑海里的想象变成可以看见的作品。 这里会持续整理我的创作、尝试与思考。",
+  "email": "",
+  "headline": "让 想象 | 慢慢 *成为作品*",
+  "intro": "欢迎来到我的创作空间。\n这里收藏我的灵感、探索，以及正在完成的各种作品。",
+  "name": "幻想家lxlx",
+  "social": "",
+  "works": [
+    {
+      "category": "每日星座工具",
+      "media": "/portfolio/media/star-mood-cover.png",
+      "poster": "",
+      "section": "",
+      "title": "星天气",
+      "url": "https://luoxianjun622-commits.github.io/star-mood-daily-lxlx/"
+    },
+    {
+      "category": "报告文件夹 · 持续整理",
+      "media": "/portfolio/media/reports-folder.svg",
+      "poster": "",
+      "section": "",
+      "title": "视频拆解报告",
+      "url": "/portfolio/reports/"
+    }
+  ]
+}
