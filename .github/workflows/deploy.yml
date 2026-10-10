@@ -23,6 +23,7 @@ jobs:
         run: |
           cat website.zip.part* > website.zip
           unzip -q website.zip -d site
+          cp content.json site/portfolio/content.json
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
