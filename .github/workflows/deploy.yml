@@ -22,8 +22,14 @@ jobs:
       - name: Unpack website
         run: |
           cat website.zip.part* > website.zip
-          unzip -q website.zip -d site
+          unzip -q website.zip "portfolio/*" "LICENSE.txt" -d site
           cp content.json site/portfolio/content.json
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          p = Path('site/portfolio/personal.js')
+          p.write_text(p.read_text().replace('<a href="/">返回建筑首页 ↗</a>', ''))
+          Path('site/index.html').write_text('<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>幻想家lxlx · 个人网站</title><meta http-equiv="refresh" content="0;url=/portfolio/"><script>location.replace(\'/portfolio/\'+location.search+location.hash)</script></head><body><a href="/portfolio/">进入我的个人网站</a></body></html>\n')
+          PYTHON
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
